@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../assets/.idea/assets.iml" filepath="$PROJECT_DIR$/../assets/.idea/assets.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/big portfolio.iml" filepath="$PROJECT_DIR$/.idea/big portfolio.iml" />
       <module fileurl="file://$USER_HOME$/django-darslari/.idea/django-darslari.iml" filepath="$USER_HOME$/django-darslari/.idea/django-darslari.iml" />
     </modules>
