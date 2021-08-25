@@ -76,14 +76,6 @@
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
                             <p style="font-weight: bold; margin-top: 10px; margin-right: 10px">{{ user.username | title }}</p>
-                            <div class="dropdown-menu dropdown-menu-lg-right"
-                                aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">Yangi post</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Kalit so'zni almashtirish</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="{% url 'logout' %}">Chiqib ketish</a>
-                            </div>
                         </li>
                     </ul>
                 {% else %}
@@ -103,11 +95,11 @@
             Lists
           </button>
           <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li><a class="dropdown-item" href="{% url 'home' %}">Home</a></li>
             <li><a class="dropdown-item" href="#">Posts</a></li>
-            <li><a class="dropdown-item" href="#">Home</a></li>
             <li><a class="dropdown-item" href="#">Books</a></li>
             <li><a class="dropdown-item" href="#">Yangi post</a></li>
-            <li><a class="dropdown-item" href="#">Kalit so'zni almashtirish</a></li>
+            <li><a class="dropdown-item" href="{% url 'password_change'%}">Kalit so'zni almashtirish</a></li>
             <li><a class="dropdown-item" href="{% url 'logout' %}">Chiqib ketish</a></li>
           </ul>
         </div>
