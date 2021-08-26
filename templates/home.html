@@ -132,7 +132,48 @@
       }
 
       #park #park1{
-        margin-top: 50px;
+        margin-top: 100px;
+
+      }
+
+      #park #animation_h #h1{
+        margin: 0;
+        padding: 0;
+        letter-spacing: 5px;
+        font-weight: bold;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+        display: inline-block;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        -webkit-text-stroke: 0.1vw #383d52;
+        text-transform: uppercase;
+      }
+      #park #animation_h #h1::before
+      {
+        content: attr(data-text);
+        position: absolute;
+        letter-spacing: 5px;
+        top: 0;
+        left: 0;
+        width: 0%;
+        height: 100%;
+        color: yellow;
+        -webkit-text-stroke: 0cm #000000;
+        border-right: 2px solid yellow;
+        overflow: hidden;
+        animation: animate 8s linear infinite;
+      }
+      @keyframes animate {
+        0%,10%,100%
+        {
+          width: 0;
+        }
+        60%,70%,90%
+        {
+          width: 100%;
+        }
       }
 
     </style>
@@ -178,18 +219,24 @@
             <li><a class="dropdown-item" href="{% url 'logout' %}">Chiqib ketish</a></li>
           </ul>
         </div>
-      <div class="container">
+      <div id="animation_h" class="container">
         <div class="d-sm-flex align-items-center justify-content-between">
           <div>
-            <h1>Become a <span class="text-warning"> Web Developer </span></h1>
-            <p class="lead my-4">
+            <div class="dropdown-divider"></div>
+            </br>
+            <h1 id="h1" data-text="Welcome!">Welcome!</h1>
+            </br>
+            </br>
+            </br>
+            <h2>Become a Web Developer</h2>
+            </br>
+            </br>
+            <h3>
               The web development industry has a future.
-            </p>
+            </h3>
+            </br>
           </div>
-          <img src="/static/assets/img/web-developer.png" width="450" height="300" class="rounded-circle mb-lg-2 border border-danger" alt=""/>
-          </br>
         </div>
-        </br>
       </div>
       <div id="park1" class="container">
         <div class="d-md-flex justify-content-between align-items-center">
@@ -206,6 +253,9 @@
 
     <!-- Boxes -->
     <section  id="public" class="p-5 bg-dark">
+      </br>
+      </br>
+      </br>
       <div class="container">
         <div class="row text-center g-4">
           <div class="col-md-6 col-lg-3">
@@ -291,31 +341,31 @@
 
 <!--    &lt;!&ndash; About Sections &ndash;&gt;-->
 <!--    <section id="learns" class="p-5" style="background-color: lavender">-->
-      <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
-        <div class="carousel-inner" style="text-align: center">
-          <div class="carousel-item active">
-            <img src="/static/assets/img/A.png" height="600" width="1250" class="rounded-pill" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="/static/assets/img/Y.png" height="600" width="1250" class="rounded-pill" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="/static/assets/img/Z.png" height="600" width="1250" class="rounded-pill" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="/static/assets/img/X.png" height="600" width="1250" class="rounded-pill" alt="...">
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-      </br>
+<!--      <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">-->
+<!--        <div class="carousel-inner" style="text-align: center">-->
+<!--          <div class="carousel-item active">-->
+<!--            <img src="/static/assets/img/A.png" class="rounded" alt="...">-->
+<!--          </div>-->
+<!--          <div class="carousel-item">-->
+<!--            <img src="/static/assets/img/Y.png" class="rounded" alt="...">-->
+<!--          </div>-->
+<!--          <div class="carousel-item">-->
+<!--            <img src="/static/assets/img/Z.png" class="rounded" alt="...">-->
+<!--          </div>-->
+<!--          <div class="carousel-item">-->
+<!--            <img src="/static/assets/img/X.png" class="rounded" alt="...">-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">-->
+<!--          <span class="carousel-control-prev-icon" aria-hidden="true"></span>-->
+<!--          <span class="visually-hidden">Previous</span>-->
+<!--        </button>-->
+<!--        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">-->
+<!--          <span class="carousel-control-next-icon" aria-hidden="true"></span>-->
+<!--          <span class="visually-hidden">Next</span>-->
+<!--        </button>-->
+<!--      </div>-->
+<!--      </br>-->
     </section>
 
     <!--News-->
