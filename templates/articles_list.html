@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}Post{% endblock title %}
+
+{% block content %}
+
+
+{% for articles in object_list %}
+        <div class="card">
+            <div class="card-header">
+                <span class="font-weight-bold"><a href="{% url 'articles_detail' articles.pk %}">{{ articles.title }}</a></span>
+            </div>
+            {% if articles.photo %}
+                <img class="card-img-top" src="{{ articles.photo.url }}" width="350" height="450" alt="{{ articles.title }}">
+            {% endif %}
+            <div class="card-body">
+                {{ articles.summary }}...<a href="{% url 'articles_detail' articles.pk %}">Batafsil</a>
+            </div>
+            <div class="card-footer text-left text-muted">
+                <span class="text-muted">Muallif {{ articles.author | title }} - {{ articles.date }}</span>
+            </div>
+            </br>
+        </div>
+{% endfor %}
+
+{% endblock content %}

@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %}Post haqida{% endblock title %}
+
+{% block content %}
+
+    <div class="container-fluid">
+        <div class="card">
+            <div class="card-body">
+                {% if object.photo %}
+                    <img class="card-img-top" width="350" height="450" src="{{ object.photo.url }}" alt="{{ object.title }}">
+                {% endif %}
+                <h1 class="card-title">{{ object.title }}</h1>
+                <h6 class="card-subtitle mb-2 text-muted">Muallif: {{ object.author }} | {{ object.date }}</h6>
+                <p class="card-text">{{ object.body | safe }}</p>
+                <a href="{% url 'articles_edit' articles.pk %}">Tahrirlash</a> |
+                <a href="{% url 'articles_delete' articles.pk %}">O`chirish</a> |
+                <a href="{% url 'articles_list' %}">Barcha postlar</a>
+            </div>
+            <div class="card">
+                <div class="card-header">Izohlar</div>
+                {% for comment in articles.comments.all %}
+                    <div class="card-body">
+                        <blockquote class="blockquote mb-0">
+                            <p>{{ comment }}</p>
+                            <footer class="blockquote-footer">{{ comment.author }}</footer>
+                        </blockquote>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <p></p>
+    </div>
+
+{% endblock content %}

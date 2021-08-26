@@ -171,9 +171,9 @@
           </button>
           <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
             <li><a class="dropdown-item" href="{% url 'home' %}">Home</a></li>
-            <li><a class="dropdown-item" href="#">Posts</a></li>
+            <li><a class="dropdown-item" href="{% url 'articles_list' %}">Posts</a></li>
             <li><a class="dropdown-item" href="#">Books</a></li>
-            <li><a class="dropdown-item" href="#">Yangi post</a></li>
+            <li><a class="dropdown-item" href="{% url 'articles_new' %}">Yangi post</a></li>
             <li><a class="dropdown-item" href="{% url 'password_change'%}">Kalit so'zni almashtirish</a></li>
             <li><a class="dropdown-item" href="{% url 'logout' %}">Chiqib ketish</a></li>
           </ul>
