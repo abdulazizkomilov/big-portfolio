@@ -117,12 +117,12 @@
       }
 
       #nav_site{
-        background-image: url("/static/assets/img/nav.png");
+        background-image: url("/static/assets/img/nav1.png");
         background-size: 1600px 400px;
       }
 
       #instructors{
-        background-image: url("/static/assets/img/3.png");
+        background-image: url("/static/assets/img/p.png");
         background-size: 1600px 1500px;
       }
 
@@ -189,17 +189,6 @@
         flex-wrap: wrap;
         z-index: 1;
       }
-      /*#public #card1::before*/
-      /*{*/
-      /*  content: '';*/
-      /*  position: absolute;*/
-      /*  top: 0;*/
-      /*  left: 0;*/
-      /*  width: 100%;*/
-      /*  height: 100%;*/
-      /*  background: linear-gradient(#2196f3,#f0f);*/
-      /*  clip-path: circle(20% at right 70%);*/
-      /*}*/
       #public #card1 .vanil
       {
         position: relative;
@@ -265,14 +254,19 @@
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
       }
 
+      #learn
+      {
+        background-image: url("/static/assets/img/5.png");
+      }
+
     </style>
 
   </head>
   <body style="margin-top: 5px;">
     <!--  navbar-->
     <div id="SITE_CONTAINER" style="margin-bottom: 5px;">
-      <nav id="nav_site" class="navbar navbar-expand-lg navbar-light rounded-pill" style="background-color: #F4B41A;">
-            <a class="navbar-brand" href="{% url 'home' %}">
+      <nav id="nav_site" class="navbar navbar-expand-lg navbar-light rounded-pill">
+            <a class="navbar-brand" href="{% url 'home' %}" style="color: white">
                 <img src="/static/assets/img/logo.png" width="48" height="48" class="rounded-circle" alt="">
                 KingsDev Blog
             </a>
@@ -280,7 +274,7 @@
                 {% if user.is_authenticated %}
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <p style="font-weight: bold; margin-top: 10px; margin-right: 10px">{{ user.username | title }}</p>
+                            <p style="font-weight: bold; margin-top: 10px; margin-right: 10px; color: white; align-items: end">{{ user.username | title }}</p>
                         </li>
                     </ul>
                 {% else %}
@@ -361,7 +355,7 @@
                   <h3><img src="/static/assets/img/Telegram-logo.png" width="150" height="95" class="rounded-circle mb-3" alt=""/></h3>
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                     Ab dolor ea explicabo illum ipsam nihil.</p>
-                <a href="#">Read More</a>
+                <a href="http://t.me/abdulaziz9963">Read More</a>
               </div>
         </div>
         <div class="vanil">
@@ -455,54 +449,13 @@
       </div>
     </section>
 
-        <!-- Boxes -->
-    <section class="p-5 bg-light">
-      <h3 style="text-align: center; font-weight: bold;">The biggest campaigns</h3></br>
-      <div class="container">
-        <div class="row text-center g-4">
-          <div class="col-md-6 col-lg-3">
-            <div class="card bg-dark">
-              <div class="card-body text-center">
-                <img src="/static/assets/img/apple.png" width="150" height="130" class="rounded-circle mb-3" alt=""/>
-                <h3 class="card-title mb-3"><a href="http://apple.com"><p style="color: white">Apple</p></a></h3>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="card bg-dark">
-              <div class="card-body text-center">
-                <img src="/static/assets/img/tesla2.png" width="150" height="130" class="rounded-circle mb-3" alt=""/>
-                <h3 class="card-title mb-3"><a href="http://tesla.com"><p style="color: white">Tesla</p></a></h3>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="card bg-dark">
-              <div class="card-body text-center">
-                <img src="/static/assets/img/google.png" width="150" height="130" class="rounded-circle mb-3" alt=""/>
-                <h3 class="card-title mb-3"><a href="http://google.com"><p style="color: white">Google</p></a></h3>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="card bg-dark">
-              <div class="card-body text-center">
-                <img src="/static/assets/img/amazon.png" width="150" height="130" class="rounded-circle mb-3" alt=""/>
-                <h3 class="card-title mb-3"><a href="http://amazon.com"><p style="color: white">Amazon</p></a></h3>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!--instructors-->
     <section id="instructors" class="p-5 bg-primary">
       <div class="container">
         <a href="http://mohirdev.uz"><h2 class="text-center text-white">Our Instructors</h2></a>
         <p class="lead text-center text-white mb-5">
-        <h5><p style="text-transform: uppercase; font-weight: bold; text-align: center">Mohirdev team. The easiest and Uzbek language platform for learning programming!</p></h5>
-          <h6><p style="font-style: italic; text-align: center">Our instructors all have 5+ years working as a web developer in the industry</p></h6>
+        <h5><p style="text-transform: uppercase; color: white; font-weight: bold; text-align: center">Mohirdev team. The easiest and Uzbek language platform for learning programming!</p></h5>
+          <h6><p style="font-style: italic; text-align: center; color: whitesmoke">Our instructors all have 5+ years working as a web developer in the industry</p></h6>
         </p>
         <div class="row g-4">
           <div class="col-md-6 col-lg-3">
